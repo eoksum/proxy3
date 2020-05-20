@@ -333,6 +333,7 @@ class ProxyRequestHandler(BaseHTTPRequestHandler):
 
         if res_body is not None:
             res_body_text = None
+            print with_color(31, "==== RESPONSE BODY ====\n%s\n" % res_body)
             content_type = res.headers.get('Content-Type', '')
 
             if content_type.startswith('application/json'):
